@@ -38,7 +38,10 @@ namespace WindowsFormsApp3
             textBox1.AddBinding(x => x.Text, this.person, x => x.Name);
             comboBox1.AddBinding(x => x.SelectedItem, this.person, x => x.Gender);
             dateTimePicker1.AddBinding(x => x.Value, this.person, x => x.Birthday);
-        }
+            numericUpDown1.AddBinding(x => x.Value, this.person, x => x.AvgGrade);
+            checkBox1.AddBinding(x => x.Checked, this.person, x => x.Expelled);
+            checkBox2.AddBinding(x => x.Checked, this.person, x => x.Dept);
+       }
 
         public Person Person => person;
 
