@@ -59,6 +59,8 @@ namespace WindowsFormsApp3
 
         public Person Person => person;
 
+
+
 		private void comboBox1_DrawItem(object sender, DrawItemEventArgs e)
 		{
             e.DrawBackground();

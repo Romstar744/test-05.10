@@ -7,9 +7,8 @@ namespace WindowsFormsApp3.Model
     /// <summary>
     /// Студет
     /// </summary>
-    public class Person : ICloneable
+    public class Person
     {
-        
         public Guid Id { get; set; }
         /// <summary>
         /// ФИО
@@ -24,12 +23,12 @@ namespace WindowsFormsApp3.Model
         /// <summary>
         /// <inheritdoc cref="WindowsFormsApp3.Models.Gender"/>
         /// </summary>
-        [Range(0,5)]
         public Gender Gender { get; set; }
-        /// <summary>
-        /// Средняя оценка
-        /// </summary>
-        public decimal AvgGrade{ get; set; }
+		/// <summary>
+		/// Средняя оценка
+		/// </summary>
+		[Range(0, 5)]
+		public decimal AvgGrade{ get; set; }
         /// <summary>
         /// Отчислен
         /// </summary>
@@ -38,11 +37,5 @@ namespace WindowsFormsApp3.Model
         /// Задолженности
         /// </summary>
         public bool Dept { get; set; }
-
-        public object Clone()
-        {
-            return MemberwiseClone();
-        }
-
     }
 }
