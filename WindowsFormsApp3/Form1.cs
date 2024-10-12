@@ -27,6 +27,7 @@ namespace WindowsFormsApp3
 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = bindingSource;
+            SetStatus();
 
         }
 
@@ -37,6 +38,7 @@ namespace WindowsFormsApp3
            {
                 people.Add(personForm.Person);
                 bindingSource.ResetBindings(false);
+                SetStatus();
            }
         }
 
@@ -63,6 +65,7 @@ namespace WindowsFormsApp3
                 {
                     people.Remove(data);
                     bindingSource.ResetBindings(false);
+                    SetStatus();
                 }
 			}
             
@@ -83,8 +86,18 @@ namespace WindowsFormsApp3
                     data.Dept = personForm.Person.Dept; 
                     data.Expelled = personForm.Person.Expelled;
 					bindingSource.ResetBindings(false);
+                    SetStatus();
 				}
 			}
 		}
+
+        public void SetStatus()
+        {
+            toolStripStatusLabel1.Text = $"Всего: {people.Count}";
+            toolStripStatusLabel2.Text = $"{people.Where(x => x.Gender == Gender.Female).Count()} Ж/{people.Where(x => x.Gender == Gender.Male).Count()} М";
+            toolStripStatusLabel3.Text = $"Отчисленных: {people.Where(x => x.Expelled).Count()}";
+            toolStripStatusLabel4.Text = $"Должников: {people.Where(x => x.Dept).Count()}";
+            toolStripStatusLabel5.Text = $"Средняя оценка: {people.DefaultIfEmpty(new Person()).Average(x => x.AvgGrade)}";
+        }
 	}
 }
