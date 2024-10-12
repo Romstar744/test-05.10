@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
@@ -45,10 +46,12 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label5 = new System.Windows.Forms.Label();
+			this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -211,6 +214,10 @@
 			this.label5.TabIndex = 0;
 			this.label5.Text = "Параметры студента";
 			// 
+			// errorProvider1
+			// 
+			this.errorProvider1.ContainerControl = this;
+			// 
 			// PersonForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +247,7 @@
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -264,5 +272,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-    }
+		private System.Windows.Forms.ErrorProvider errorProvider1;
+	}
 }

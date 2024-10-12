@@ -35,12 +35,12 @@ namespace WindowsFormsApp3
                 comboBox1.SelectedIndex = 0;
             }
 
-            textBox1.AddBinding(x => x.Text, this.person, x => x.Name);
-            comboBox1.AddBinding(x => x.SelectedItem, this.person, x => x.Gender);
-            dateTimePicker1.AddBinding(x => x.Value, this.person, x => x.Birthday);
-            numericUpDown1.AddBinding(x => x.Value, this.person, x => x.AvgGrade);
-            checkBox1.AddBinding(x => x.Checked, this.person, x => x.Expelled);
-            checkBox2.AddBinding(x => x.Checked, this.person, x => x.Dept);
+            textBox1.AddBinding(x => x.Text, this.person, x => x.Name, errorProvider1);
+            comboBox1.AddBinding(x => x.SelectedItem, this.person, x => x.Gender, errorProvider1);
+            dateTimePicker1.AddBinding(x => x.Value, this.person, x => x.Birthday, errorProvider1);
+            numericUpDown1.AddBinding(x => x.Value, this.person, x => x.AvgGrade, errorProvider1);
+            checkBox1.AddBinding(x => x.Checked, this.person, x => x.Expelled, errorProvider1);
+            checkBox2.AddBinding(x => x.Checked, this.person, x => x.Dept, errorProvider1);
        }
 
         public Person Person => person;
