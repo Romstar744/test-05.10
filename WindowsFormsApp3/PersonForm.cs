@@ -19,11 +19,25 @@ namespace WindowsFormsApp3
         private Person person;
         public PersonForm(Person person = null)
         {
-            this.person = person ?? DataGenerator.CreatePerson(x =>
-            {
+            this.person = person == null
+                ? DataGenerator.CreatePerson(x =>
+                {
+                x.Id = Guid.NewGuid();
                 x.Name = "Иванов";
-                x.Gender = Gender.Dog;
-            });
+                x.Gender = Gender.Male;
+                x.Birthday = DateTime.Now.AddYears(-12);
+                })
+                : new Person
+                {
+                    Id = person.Id,
+                    Name = person.Name,
+                    Gender = Gender.Male,
+                    Birthday = person.Birthday,
+                    AvgGrade = person.AvgGrade,
+                    Dept = person.Dept,
+                    Expelled = person.Expelled,
+                };
+
             InitializeComponent();
 
             foreach (var item in Enum.GetValues(typeof(Gender)))

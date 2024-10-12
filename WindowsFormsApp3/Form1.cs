@@ -76,10 +76,15 @@ namespace WindowsFormsApp3
                 var personForm = new PersonForm(data);
                 if (personForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    //people.Add(data);
-                    //bindingSource.ResetBindings(false);
-                }
-            }
+                    data.Name = personForm.Person.Name;
+                    data.Gender = personForm.Person.Gender;
+                    data.AvgGrade = personForm.Person.AvgGrade;
+                    data.Birthday = personForm.Person.Birthday;
+                    data.Dept = personForm.Person.Dept; 
+                    data.Expelled = personForm.Person.Expelled;
+					bindingSource.ResetBindings(false);
+				}
+			}
 		}
 	}
 }
