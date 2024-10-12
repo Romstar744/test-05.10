@@ -97,7 +97,7 @@ namespace WindowsFormsApp3
             toolStripStatusLabel2.Text = $"{people.Where(x => x.Gender == Gender.Female).Count()} Ж/{people.Where(x => x.Gender == Gender.Male).Count()} М";
             toolStripStatusLabel3.Text = $"Отчисленных: {people.Where(x => x.Expelled).Count()}";
             toolStripStatusLabel4.Text = $"Должников: {people.Where(x => x.Dept).Count()}";
-            toolStripStatusLabel5.Text = $"Средняя оценка: {people.DefaultIfEmpty(new Person()).Average(x => x.AvgGrade)}";
+            toolStripStatusLabel5.Text = $"Средняя оценка: {people.DefaultIfEmpty(new Person()).Average(x => x.AvgGrade)}"
         }
 	}
 }
