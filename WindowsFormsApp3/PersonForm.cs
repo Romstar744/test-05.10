@@ -31,7 +31,7 @@ namespace WindowsFormsApp3
                 {
                     Id = person.Id,
                     Name = person.Name,
-                    Gender = Gender.Male,
+                    Gender = person.Male,
                     Birthday = person.Birthday,
                     AvgGrade = person.AvgGrade,
                     Dept = person.Dept,

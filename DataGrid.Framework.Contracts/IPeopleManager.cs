@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp3.Model;
+using WindowsFormsApp3;
 
 namespace DataGrid.Contracts
 {
@@ -16,12 +16,13 @@ namespace DataGrid.Contracts
 		/// Возвращает список Person
 		/// </summary>
 		/// <returns></returns>
-		IReadOnlyCollection<Person> GetAll();
+		Task<IReadOnlyCollection<Person>> GetAll();
+		Task<Person> Add(Person person);
 
-		Person Add(Person person);
+		Task EditAsync (Person person);
 
-		void Edit (Person person);
+		Task<bool> DeleteAsync (Guid id);
 
-		void Delete (Guid id);
+		Task<IPeopleManager> GetAllAsync ();
 	}
 }

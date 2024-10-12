@@ -98,5 +98,15 @@
   <ItemGroup>
     <None Include="Resources\623db3ec60a568663342139683653711.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataGrid.Framework.Contracts\DataGrid.Framework.Contracts.csproj">
+      <Project>{9515d66a-d9fe-4367-9c87-cd17a1704722}</Project>
+      <Name>DataGrid.Framework.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataGrid.Framework.PeopleManager\DataGrid.Framework.PeopleManager.csproj">
+      <Project>{687ee9a3-ece4-4b7c-97cd-db235cddbfa5}</Project>
+      <Name>DataGrid.Framework.PeopleManager</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

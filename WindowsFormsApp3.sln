@@ -5,7 +5,11 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp3", "WindowsFormsApp3\WindowsFormsApp3.csproj", "{7852C4BF-7EA5-4209-B4A3-0548144DA4E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid.Contracts", "DataGrid.Contracts\DataGrid.Contracts.csproj", "{0232BFAB-6E1F-4029-9BB9-158A5889E484}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid.Storage.Memory", "DataGrid.Storage.Memory\DataGrid.Storage.Memory.csproj", "{DAEFE4F0-7798-4B1F-944F-9CD83B3C7E4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid.Framework.Contracts", "DataGrid.Framework.Contracts\DataGrid.Framework.Contracts.csproj", "{9515D66A-D9FE-4367-9C87-CD17A1704722}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid.Framework.PeopleManager", "DataGrid.Framework.PeopleManager\DataGrid.Framework.PeopleManager.csproj", "{687EE9A3-ECE4-4B7C-97CD-DB235CDDBFA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,18 @@ Global
 		{7852C4BF-7EA5-4209-B4A3-0548144DA4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7852C4BF-7EA5-4209-B4A3-0548144DA4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7852C4BF-7EA5-4209-B4A3-0548144DA4E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0232BFAB-6E1F-4029-9BB9-158A5889E484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0232BFAB-6E1F-4029-9BB9-158A5889E484}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0232BFAB-6E1F-4029-9BB9-158A5889E484}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0232BFAB-6E1F-4029-9BB9-158A5889E484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEFE4F0-7798-4B1F-944F-9CD83B3C7E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEFE4F0-7798-4B1F-944F-9CD83B3C7E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEFE4F0-7798-4B1F-944F-9CD83B3C7E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEFE4F0-7798-4B1F-944F-9CD83B3C7E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9515D66A-D9FE-4367-9C87-CD17A1704722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9515D66A-D9FE-4367-9C87-CD17A1704722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9515D66A-D9FE-4367-9C87-CD17A1704722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9515D66A-D9FE-4367-9C87-CD17A1704722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{687EE9A3-ECE4-4B7C-97CD-DB235CDDBFA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{687EE9A3-ECE4-4B7C-97CD-DB235CDDBFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{687EE9A3-ECE4-4B7C-97CD-DB235CDDBFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{687EE9A3-ECE4-4B7C-97CD-DB235CDDBFA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
