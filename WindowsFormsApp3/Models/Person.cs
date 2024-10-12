@@ -7,7 +7,7 @@ namespace WindowsFormsApp3.Model
     /// <summary>
     /// Студет
     /// </summary>
-    public class Person
+    public class Person : ICloneable
     {
         
         public Guid Id { get; set; }
@@ -38,6 +38,11 @@ namespace WindowsFormsApp3.Model
         /// Задолженности
         /// </summary>
         public bool Dept { get; set; }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
 
     }
 }

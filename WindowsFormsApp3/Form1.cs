@@ -53,5 +53,33 @@ namespace WindowsFormsApp3
 				e.Value = data.Dept ? "Да" : string.Empty;
 			}
 		}
+
+		private void toolStripDelete_Click(object sender, EventArgs e)
+		{
+            if(dataGridView1.SelectedRows.Count != 0)
+            {
+                var data = (Person)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].DataBoundItem;
+                if (MessageBox.Show($"Вы действительно хотите удалить {data.Name}?", "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    people.Remove(data);
+                    bindingSource.ResetBindings(false);
+                }
+			}
+            
+		}
+
+		private void toolStripEdit_Click(object sender, EventArgs e)
+		{
+            if (dataGridView1.SelectedRows.Count != 0)
+            {
+                var data = (Person)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].DataBoundItem;
+                var personForm = new PersonForm(data);
+                if (personForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    //people.Add(data);
+                    //bindingSource.ResetBindings(false);
+                }
+            }
+		}
 	}
 }
