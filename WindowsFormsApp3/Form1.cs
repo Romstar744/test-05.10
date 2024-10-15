@@ -34,7 +34,7 @@ namespace WindowsFormsApp3
         private void toolStripAdd_Click(object sender, EventArgs e)
         {
            var personForm = new PersonForm();
-           if(personForm.ShowDialog(this) == DialogResult.OK)
+           if (personForm.ShowDialog(this) == DialogResult.OK)
            {
                 people.Add(personForm.Person);
                 bindingSource.ResetBindings(false);
@@ -58,7 +58,7 @@ namespace WindowsFormsApp3
 
 		private void toolStripDelete_Click(object sender, EventArgs e)
 		{
-            if(dataGridView1.SelectedRows.Count != 0)
+            if (dataGridView1.SelectedRows.Count != 0)
             {
                 var data = (Person)dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].DataBoundItem;
                 if (MessageBox.Show($"Вы действительно хотите удалить {data.Name}?", "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
